@@ -1,6 +1,7 @@
 -- migrate:up
 create table statusdog.pending_registrations (
-	email varchar(500) not null primary key,
+  id BIGINT primary key,
+	email varchar(500) not null,
 	challenge text null
 )
 
