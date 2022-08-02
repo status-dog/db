@@ -53,6 +53,16 @@ ALTER SEQUENCE statusdog.authenticators_id_seq OWNED BY statusdog.authenticators
 
 
 --
+-- Name: pending_registrations; Type: TABLE; Schema: statusdog; Owner: -
+--
+
+CREATE TABLE statusdog.pending_registrations (
+    email character varying(500) NOT NULL,
+    challenge text
+);
+
+
+--
 -- Name: schema_migrations; Type: TABLE; Schema: statusdog; Owner: -
 --
 
@@ -114,6 +124,14 @@ ALTER TABLE ONLY statusdog.authenticators
 
 
 --
+-- Name: pending_registrations pending_registrations_pkey; Type: CONSTRAINT; Schema: statusdog; Owner: -
+--
+
+ALTER TABLE ONLY statusdog.pending_registrations
+    ADD CONSTRAINT pending_registrations_pkey PRIMARY KEY (email);
+
+
+--
 -- Name: schema_migrations schema_migrations_pkey; Type: CONSTRAINT; Schema: statusdog; Owner: -
 --
 
@@ -148,4 +166,5 @@ CREATE INDEX credential_ids ON statusdog.authenticators USING btree (credential_
 INSERT INTO statusdog.schema_migrations (version) VALUES
     ('20220802130633'),
     ('20220802132023'),
-    ('20220802132215');
+    ('20220802132215'),
+    ('20220802133239');
