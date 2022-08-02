@@ -12,6 +12,4 @@ create table statusdog.authenticators (
 )
 
 
--- migrate:down
-drop table statusdog.authenticators
 

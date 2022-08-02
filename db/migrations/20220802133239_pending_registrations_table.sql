@@ -4,7 +4,3 @@ create table statusdog.pending_registrations (
 	challenge text null
 )
 
-
--- migrate:down
-
-drop table statusdog.pending_registrations

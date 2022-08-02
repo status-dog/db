@@ -5,6 +5,4 @@ create table statusdog.USERS (
 	current_challenge text null
 )
 
--- migrate:down
-drop table statusdog.USERS
 
