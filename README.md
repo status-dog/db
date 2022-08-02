@@ -3,6 +3,12 @@
 
 Only a very basic setup for now
 
+## Start and migrate
+
+``` shell
+./start.sh
+```
+
 
 ## Docker container
 ``` shell
